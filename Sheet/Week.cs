@@ -1,40 +1,70 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Sheet
 {
-    abstract class Week
+	public enum DayOfWeek
     {
-        public enum DayOfWeek
-        {
-            Monday = 0,
-            Tuesday = 1,
-            Wednesday = 2,
-            Thursday = 3,
-            Friday = 4
-            //Saturday = 5,
-            //Sunday = 6
-        }
+		Monday = 0,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday,
+		Sunday
+    }    
+		
+    internal class Week
+    {
+        private double[] dn = new double[7]; //дней в месяце
+        private double[] dch = new double[7]; //количество часов в этот день
 
-        double[] dn = new double[5]; //дней в месяце
-        double[] dch = new double[5]; //количество часов в этот день
-
-        public virtual double this[DayOfWeek day]
+        internal double this[DayOfWeek day]
         {
             get
             {
-                if ((int)day < 0 || (int)day > 4) throw new Exception("Week - double this[int index]");
+                if (day < DayOfWeek.Monday || day > DayOfWeek.Sunday) throw new Exception("Week - double this[int index]");
                 return dn[(int)day] * dch[(int)day];
             }
         }
-
-
+		
+		internal void SetWeek(IEnumerable<int> DayOfMonth, IEnumerable<int> HoursOfDay)
+		{
+			if(DayOfMonth.Count()>dn.Length) throw new Exception("SetWeek >>>");
+			if(HoursOfDay.Count()>dch.Length) throw new Exception("SetWeek >>>");
+			int i = 0;
+			foreach(int a in DayOfMonth)
+				dn[i++] = a;
+			i=0;
+			foreach(int a in HoursOfDay)
+				dch[i++] = a;	
+		}
     }
 
-    class UpWeek : Week
-    {
-    }
+	
+	public class WeekManager
+	{
+		private Week _upWeek;
+		private Week _downWeek;
+			
+		public double this[DayOfWeek day]
+        {
+            get
+            {
+                if (day < DayOfWeek.Monday || day > DayOfWeek.Sunday) throw new Exception("WeekManager - double this[int index]");
+                return _upWeek[day] + _downWeek[day];
+            }
+        }	
 
-    class DownWeek : Week
-    {
-    }
+		public void SetUpWeek(IEnumerable<int> DayOfMonth, IEnumerable<int> HoursOfDay)
+		{
+			_upWeek.SetWeek(DayOfMonth, HoursOfDay)
+		}
+		
+		public void SetDownWeek(IEnumerable<int> DayOfMonth, IEnumerable<int> HoursOfDay)
+		{
+			_downWeek.SetWeek(DayOfMonth, HoursOfDay)
+		}
+	}
 }
