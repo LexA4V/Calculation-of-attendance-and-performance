@@ -11,7 +11,7 @@
         public double GetHourOfMounth()
         {
             double Sum = 0;
-            for (Week.DayOfWeek i = Week.DayOfWeek.Monday; i <= Week.DayOfWeek.Friday; i++)
+            for (DayOfWeek i = DayOfWeek.Monday; i <= DayOfWeek.Friday; i++)
                 Sum += _weeks[i];
             return Sum;
         }
@@ -26,9 +26,9 @@
 		
 		public double Успеваемость(int countStudets, int countStudents345)
 		{
-			if(countStudets < countStudents3) return -1;
+			if(countStudets < countStudents345) return -1;
 			
-			return countStudents3*100.0/countStudets;
+			return countStudents345*100.0/countStudets;
 		}	
 
 		public double Качество(int countStudets, int countStudents45)

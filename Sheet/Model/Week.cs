@@ -59,12 +59,12 @@ namespace Sheet
 
 		public void SetUpWeek(IEnumerable<int> DayOfMonth, IEnumerable<int> HoursOfDay)
 		{
-			_upWeek.SetWeek(DayOfMonth, HoursOfDay)
+            _upWeek.SetWeek(DayOfMonth, HoursOfDay);
 		}
 		
 		public void SetDownWeek(IEnumerable<int> DayOfMonth, IEnumerable<int> HoursOfDay)
 		{
-			_downWeek.SetWeek(DayOfMonth, HoursOfDay)
+            _downWeek.SetWeek(DayOfMonth, HoursOfDay);
 		}
 	}
 }

@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Sheet
@@ -34,17 +28,13 @@ namespace Sheet
             textBox1.Text = textBox16.Text;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.OpenForms["GForm"].Close();
+            Application.OpenForms["StartForm"].Close();
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CheckValidator()
         {
             if (textBox1.Text != "" || textBox16.Text != "") n = Convert.ToUInt32(textBox1.Text);
             if (textBox2.Text != "") tr = Convert.ToUInt32(textBox2.Text);
@@ -71,6 +61,11 @@ namespace Sheet
             if (textBox15.Text != "") dchN[4] = Convert.ToDouble(textBox15.Text);
             if (textBox17.Text != "") vpr = Convert.ToUInt32(textBox17.Text);
             if (textBox18.Text != "") prby = Convert.ToUInt32(textBox18.Text);
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            CheckValidator();
             //для человеко-часов
             if ((textBox6.Text != "") && (textBox7.Text != "") && (textBox8.Text != "") && (textBox9.Text != "") && (textBox10.Text != "") && (comboBox1.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != "") && (comboBox4.Text != "") && (comboBox5.Text != ""))
             {
@@ -200,6 +195,8 @@ namespace Sheet
             Array.Clear(dchN, 0, dchN.Length);
         }
 
+        
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -325,7 +322,7 @@ namespace Sheet
             }
         }
 
-        public void button3_Click(object sender, EventArgs e)
+        public void btnCalendar_Click(object sender, EventArgs e)
         {
             (sender as Button).Enabled = false;
             Calendar c = new Calendar(sender as Button);
@@ -341,36 +338,10 @@ namespace Sheet
 
         private void button5_Click(object sender, EventArgs e)
         {
-            About_the_program a = new About_the_program();
+            AboutTheProgram a = new AboutTheProgram();
             this.Hide();
             a.ShowDialog();
             this.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //if (textBox1.Text != "")
-            //    n_1.Value = Convert.ToInt32(textBox1.Text);
-            //if (textBox17.Text != "")
-            //    n_2.Value = Convert.ToInt32(textBox17.Text);
-            //if (textBox18.Text != "")
-            //    n_3.Value = Convert.ToInt32(textBox18.Text);
-            //if (textBox20.Text != "")
-            //    n_4.Value = Convert.ToInt32(textBox20.Text);
-            //if (textBox21.Text != "")
-            //    n_5.Value = Convert.ToInt32(textBox21.Text);
-            //if (textBox2.Text != "")
-            //    n_6.Value = Convert.ToInt32(textBox2.Text);
-            //if (textBox3.Text != "")
-            //    n_7.Value = Convert.ToInt32(textBox3.Text);
-            //if (textBox4.Text != "")
-            //    n_8.Value = Convert.ToInt32(textBox4.Text);
-            //if (textBox5.Text != "")
-            //    n_9.Value = Convert.ToInt32(textBox5.Text);
-            //Output O = new Output();
-            //this.Hide();
-            //O.ShowDialog();
-            //this.Show();
         }
 
         private void textBox_KeyPress(object sender, KeyPressEventArgs e)

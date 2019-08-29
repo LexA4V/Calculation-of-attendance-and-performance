@@ -3,27 +3,27 @@ using System.Windows.Forms;
 
 namespace Sheet
 {
-    public partial class GForm : Form
+    public partial class StartForm : Form
     {
-        public GForm()
+        public StartForm()
         {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            About_the_program a = new About_the_program();
+            AboutTheProgram a = new AboutTheProgram();
             this.Hide();
             a.ShowDialog();
             this.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnReference_Click(object sender, EventArgs e)
         {
             Reference r = new Reference();
             this.Hide();
@@ -39,7 +39,7 @@ namespace Sheet
             //this.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCalculate_Click(object sender, EventArgs e)
         {
             MainForm t = new MainForm();
             this.Hide();
