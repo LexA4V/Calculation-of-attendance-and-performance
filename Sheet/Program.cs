@@ -3,8 +3,6 @@ using System.Windows.Forms;
 
 namespace Sheet
 {
-
-
     static class Program
     {
         /// <summary>

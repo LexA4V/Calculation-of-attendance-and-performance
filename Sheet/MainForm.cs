@@ -322,13 +322,6 @@ namespace Sheet
             }
         }
 
-        public void btnCalendar_Click(object sender, EventArgs e)
-        {
-            (sender as Button).Enabled = false;
-            Calendar c = new Calendar(sender as Button);
-            c.Show();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pictureBox1.Enabled = false;

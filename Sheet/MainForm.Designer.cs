@@ -47,7 +47,6 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.btnCalendar = new System.Windows.Forms.Button();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -250,7 +249,6 @@
             this.groupBox2.Controls.Add(this.comboBox7);
             this.groupBox2.Controls.Add(this.comboBox8);
             this.groupBox2.Controls.Add(this.comboBox9);
-            this.groupBox2.Controls.Add(this.btnCalendar);
             this.groupBox2.Controls.Add(this.comboBox10);
             this.groupBox2.Controls.Add(this.comboBox5);
             this.groupBox2.Controls.Add(this.comboBox4);
@@ -364,18 +362,6 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(32, 26);
             this.comboBox9.TabIndex = 53;
-            // 
-            // btnCalendar
-            // 
-            this.btnCalendar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCalendar.Location = new System.Drawing.Point(29, 135);
-            this.btnCalendar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCalendar.Name = "btnCalendar";
-            this.btnCalendar.Size = new System.Drawing.Size(173, 60);
-            this.btnCalendar.TabIndex = 41;
-            this.btnCalendar.Text = "Календарь";
-            this.btnCalendar.UseVisualStyleBackColor = false;
-            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
             // comboBox10
             // 
@@ -959,7 +945,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnCalendar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;

@@ -35,12 +35,5 @@
 		{
 			return Успеваемость(countStudets, countStudents45);
 		}
-
-
     }
-
-    
-
-
-
 }
