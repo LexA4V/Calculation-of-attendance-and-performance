@@ -40,9 +40,6 @@
             this.cBCountDayOfMounthDownWeek.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBCountDayOfMounthDownWeek.Enabled = false;
             this.cBCountDayOfMounthDownWeek.FormattingEnabled = true;
-            this.cBCountDayOfMounthDownWeek.Items.AddRange(new object[] {
-            "2",
-            "3"});
             this.cBCountDayOfMounthDownWeek.Location = new System.Drawing.Point(4, 111);
             this.cBCountDayOfMounthDownWeek.Margin = new System.Windows.Forms.Padding(4);
             this.cBCountDayOfMounthDownWeek.Name = "cBCountDayOfMounthDownWeek";
@@ -76,9 +73,6 @@
             // 
             this.cBCountDayOfMounthUpWeek.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBCountDayOfMounthUpWeek.FormattingEnabled = true;
-            this.cBCountDayOfMounthUpWeek.Items.AddRange(new object[] {
-            "4",
-            "5"});
             this.cBCountDayOfMounthUpWeek.Location = new System.Drawing.Point(4, 4);
             this.cBCountDayOfMounthUpWeek.Margin = new System.Windows.Forms.Padding(4);
             this.cBCountDayOfMounthUpWeek.Name = "cBCountDayOfMounthUpWeek";
@@ -108,7 +102,7 @@
             this.Controls.Add(this.tBCountHoursOfTheDayDownWeek);
             this.Controls.Add(this.tBCountHoursOfTheDayUpWeek);
             this.Controls.Add(this.cBCountDayOfMounthUpWeek);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ControlDayOfWeek";
             this.Size = new System.Drawing.Size(34, 136);
             this.ResumeLayout(false);

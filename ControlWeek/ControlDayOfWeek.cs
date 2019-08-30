@@ -11,16 +11,16 @@ namespace ControlWeekS
         {
             InitializeComponent();
 
-            cBCountDayOfMounthUpWeek.DataSource = hh[1];
+            cBCountDayOfMounthUpWeek.DataSource = CountDayOfMounth["oneWeek"];
 
             tBCountHoursOfTheDayDownWeek.Enabled = false;
             cBCountDayOfMounthDownWeek.Enabled = false;
         }
 
-        private List<string[]> hh = new List<string[]>
+        private Dictionary<string, string[]> CountDayOfMounth = new Dictionary<string, string[]>
         {
-            new string[] { "2", "3" },
-            new string[] { "4", "5" }
+            ["oneWeek"] = new string[] { "4", "5"},
+            ["twoWeek"] = new string[] { "2", "3"}
         };
 
         [Category("Behavior")]
@@ -33,18 +33,30 @@ namespace ControlWeekS
         {
             get
             {
+                int countDayOfMounthUpWeek = Convert.ToInt32(cBCountDayOfMounthUpWeek.SelectedItem);
+                double countHoursOfTheDayUpWeek = double.Parse(tBCountHoursOfTheDayUpWeek.Text);
+
+                int countDayOfMounthDownWeek = 0;
+                double countHoursOfTheDayDownWeek = 0;
+
                 if (checkBWeeklyDivision.Checked)
-                    if (Convert.ToInt32(cBCountDayOfMounthUpWeek.SelectedItem) + Convert.ToInt32(cBCountDayOfMounthDownWeek.SelectedItem) > 5)
-                        throw new Exception("Количество дней в месяце не может быть больше 5!!");
+                {
+                    countDayOfMounthDownWeek = Convert.ToInt32(cBCountDayOfMounthDownWeek.SelectedItem);
+                    countHoursOfTheDayDownWeek = double.Parse(tBCountHoursOfTheDayDownWeek.Text);
+                }
+
+                if (countDayOfMounthUpWeek + countDayOfMounthDownWeek > 5)
+                    throw new ArgumentException("Количество дней в месяце не может быть больше 5!!");
+
+                if (countHoursOfTheDayUpWeek > 24 || countHoursOfTheDayDownWeek > 24)
+                    throw new ArgumentException("В сутках не больше 24 часов!");
 
                 double totalHours = 0.0;
 
-                totalHours += Convert.ToInt32(cBCountDayOfMounthUpWeek.SelectedItem) *
-                                double.Parse(tBCountHoursOfTheDayUpWeek.Text);
+                totalHours = countDayOfMounthUpWeek * countHoursOfTheDayUpWeek;
 
                 if (checkBWeeklyDivision.Checked)
-                    totalHours += Convert.ToInt32(cBCountDayOfMounthDownWeek.SelectedItem) *
-                                double.Parse(tBCountHoursOfTheDayDownWeek.Text);
+                    totalHours += countDayOfMounthDownWeek * countHoursOfTheDayDownWeek / 2;
 
                 return totalHours;
             }
@@ -54,7 +66,8 @@ namespace ControlWeekS
         {
             if (checkBWeeklyDivision.Checked)
             {
-                cBCountDayOfMounthUpWeek.DataSource = hh[0];
+                cBCountDayOfMounthUpWeek.DataSource = CountDayOfMounth["twoWeek"];
+                cBCountDayOfMounthDownWeek.DataSource = CountDayOfMounth["twoWeek"];
 
                 tBCountHoursOfTheDayDownWeek.Enabled = true;
                 cBCountDayOfMounthDownWeek.Enabled = true;
@@ -62,7 +75,8 @@ namespace ControlWeekS
             }
             else
             {
-                cBCountDayOfMounthUpWeek.DataSource = hh[1];
+                cBCountDayOfMounthUpWeek.DataSource = CountDayOfMounth["oneWeek"];
+                cBCountDayOfMounthDownWeek.DataSource = null;
 
                 tBCountHoursOfTheDayDownWeek.Text = "";
                 tBCountHoursOfTheDayDownWeek.Enabled = false;

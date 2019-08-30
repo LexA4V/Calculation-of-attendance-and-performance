@@ -44,7 +44,7 @@ namespace Sheet
         }
 
 
-        private void ClearCalculatePerformance()
+        private void ClearResultPerformance()
         {
             tBAcademicPerformance.Clear();
             tBKnowledgeQuality.Clear();
@@ -53,30 +53,27 @@ namespace Sheet
         //вычисление успеваемости
         private void CalculatePerformance()
         {
-            ClearCalculatePerformance();
+            ClearResultPerformance();
             try
             {
-                if (tBCountStudens.Text != "")
+                int countStudents = 0;
+                if (int.TryParse(tBCountStudens.Text, out countStudents) && countStudents>0)
                 {
-                    int CountStudents = int.Parse(tBCountStudens.Text);
-
+                    //троечники
                     int CountStudents345 = 0;
-                    if (tBCountStudens345.Text != "")
+                    if (int.TryParse(tBCountStudens345.Text, out CountStudents345) && CountStudents345 > 0)
                     {
-                        CountStudents345 = int.Parse(tBCountStudens345.Text);
-
-                        tBAcademicPerformance.Text = string.Format("{0}%", Math.Round(calc.Performance(CountStudents, CountStudents345), 2));
+                        tBAcademicPerformance.Text = string.Format("{0}%", Math.Round(calc.Performance(countStudents, CountStudents345), 2));
                     }
 
+                    //хорошисты
                     int CountStudents45 = 0;
-                    if (tBCountStudens45.Text != "")
+                    if (int.TryParse(tBCountStudens45.Text, out CountStudents45) && CountStudents45 > 0)
                     {
-                        CountStudents45 = int.Parse(tBCountStudens45.Text);
+                        if (CountStudents45 > CountStudents345)
+                            throw new ArgumentException("Хорошистов должно быть меньше чем хорошистов+троечников!");
 
-                        if (CountStudents45 < CountStudents345)
-                            tBKnowledgeQuality.Text = string.Format("{0}%", Math.Round(calc.KnowledgeQuality(CountStudents, CountStudents45), 2));
-                        else
-                            throw new ArgumentException("Хорошистов меньше чем хорошистов+троечников!");
+                        tBKnowledgeQuality.Text = string.Format("{0}%", Math.Round(calc.KnowledgeQuality(countStudents, CountStudents45), 2));
                     }
                 }
             }
@@ -91,61 +88,56 @@ namespace Sheet
         }
 
 
-        private void ClearCalculateAttendance()
+        private void ClearResultAttendance()
         {
             tBCountManHours.Clear();
             tBAttendance.Clear();
             tBAbsenteeism.Clear();
         }
 
+        //вычисление посещяемости
         private void CalculateAttendance()
         {
-            ClearCalculateAttendance();
+            ClearResultAttendance();
             try
             {
                 int countStudents = 0;
-                int CountPass = 0;
-                int CountOmissions = 0;
+                int countPass = 0;
+                int countOmissions = 0;
 
-                if (tBCountStudens2.Text != "")
-                    countStudents = int.Parse(tBCountPass.Text);
-
-                if (tBCountPass.Text != "")
-                    CountPass = int.Parse(tBCountPass.Text);
-
-                if (tBCountOmissions.Text != "")
-                    CountOmissions = int.Parse(tBCountOmissions.Text);
-
-
-
-                double totalMenHours = 0;
-                double attendance = 0;
-                double omissions = 0;
-
-
-                if (countStudents <= 0) return;
-
-                totalMenHours = calc.GetHourOfMounth(countStudents, yy.Select(x => x.TotalCountHours).ToArray());
-                tBCountManHours.Text = totalMenHours.ToString();
-
-
-
-                if (CountPass > 0)
+                if (int.TryParse(tBCountStudens2.Text, out countStudents) && countStudents > 0)
                 {
-                    attendance = calc.Attendance(totalMenHours, CountPass);
-                    tBAttendance.Text = attendance.ToString();
-                }
+                    double totalMenHours = 0;
+                    double attendance = 0;
+                    double omissions = 0;
 
-
-
-                if (CountOmissions > 0)
-                {
-                    if (CountOmissions < CountPass)
+                    try
                     {
-                        omissions = calc.Omissions(totalMenHours, CountOmissions);
+                        //человеко-часы
+                        totalMenHours = calc.GetHourOfMounth(countStudents, yy.Select(x => x.TotalCountHours).ToArray());
+                        tBCountManHours.Text = string.Format("{0}ч/ч", Math.Round(totalMenHours, 2));
                     }
-                    else
-                        throw new ArgumentException("Количество пропусков без уважительной причины превышает общее количество пропусков!");
+                    catch
+                    { return; }
+
+                    //пропуски
+                    if (int.TryParse(tBCountPass.Text, out countPass) && countPass > 0)
+                    {
+                        attendance = calc.Attendance(totalMenHours, countPass);
+                        tBAttendance.Text = string.Format("{0}%", Math.Round(attendance, 2));
+                    }
+
+                    //прогулы
+                    if (int.TryParse(tBCountOmissions.Text, out countOmissions) && countOmissions > 0)
+                    {
+                        if (countOmissions < countPass)
+                        {
+                            omissions = calc.Omissions(totalMenHours, countOmissions);
+                            tBCountOmissions.Text = string.Format("{0}%", Math.Round(omissions, 2));
+                        }
+                        else
+                            throw new ArgumentException("Количество пропусков без уважительной причины превышает общее количество пропусков!");
+                    }
                 }
             }
             catch (ArgumentException ex)

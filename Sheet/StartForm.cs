@@ -23,22 +23,6 @@ namespace Sheet
             this.Show();
         }
 
-        private void btnReference_Click(object sender, EventArgs e)
-        {
-            Reference r = new Reference();
-            this.Hide();
-            r.ShowDialog();
-            this.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Dialog1 d = new Dialog1();
-            //this.Hide();
-            //d.ShowDialog();
-            //this.Show();
-        }
-
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             MainForm t = new MainForm();

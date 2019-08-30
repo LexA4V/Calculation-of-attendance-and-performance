@@ -48,8 +48,11 @@ namespace Sheet
 
         public double Omissions(double menHours, double countOmissions)
         {
-            if (menHours < 0 || countOmissions < 0) throw new ArgumentException("Количество проогулов и количество часов должны быть больше нуля!");
-            if (menHours - 2 * countOmissions < 0) throw new ArgumentException("Количество проогулов превышает количество часов!");
+            if (menHours < 0 || countOmissions < 0)
+                throw new ArgumentException("Количество проогулов и количество часов должны быть больше нуля!");
+
+            if (menHours - 2 * countOmissions < 0)
+                throw new ArgumentException("Количество проогулов превышает количество часов!");
 
             return (menHours - 2 * countOmissions) * 100.0 / menHours;
         }
