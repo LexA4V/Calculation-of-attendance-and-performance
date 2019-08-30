@@ -5,8 +5,8 @@ namespace Sheet
 {
     public partial class MainForm : Form
     {
-        uint n, tr, hr, vpr, prby;
-        double ysp, kz, chch = 0, ovpr, oprby;
+        uint vpr, prby;
+        double chch = 0, ovpr, oprby;
         double[] dnV = new double[5];
         double[] dnN = new double[5];
         double[] dchV = new double[5];
@@ -18,14 +18,16 @@ namespace Sheet
             InitializeComponent();
         }
 
+        Model calc = new Model();
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            textBox16.Text = textBox1.Text;
+            tBCountStudens2.Text = tBCountStudens.Text;
         }
 
         private void textBox16_TextChanged(object sender, EventArgs e)
         {
-            textBox1.Text = textBox16.Text;
+            tBCountStudens.Text = tBCountStudens2.Text;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -34,11 +36,50 @@ namespace Sheet
             Application.Exit();
         }
 
+        //вычисление успеваемости
+        private void CalculatePerformance()
+        {
+            try
+            {
+                if (tBCountStudens.Text != "")
+                {
+                    int CountStudents = int.Parse(tBCountStudens.Text);
+
+                    int CountStudents345 = 0;
+                    if (tBCountStudens345.Text != "")
+                    {
+                        CountStudents345 = int.Parse(tBCountStudens345.Text);
+
+                        tBAcademicPerformance.Text = string.Format("{0}%", Math.Round(calc.Performance(CountStudents, CountStudents345), 2));
+                    }
+
+                    int CountStudents45 = 0;
+                    if (tBCountStudens45.Text != "")
+                    {
+                        CountStudents45 = int.Parse(tBCountStudens45.Text);
+
+                        if (CountStudents45 < CountStudents345)
+                            tBKnowledgeQuality.Text = string.Format("{0}%", Math.Round(calc.KnowledgeQuality(CountStudents, CountStudents45), 2));
+                        else
+                            throw new ArgumentException("Хорошистов меньше чем хорошистов+троечников!");
+                    }
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
         private void CheckValidator()
         {
-            if (textBox1.Text != "" || textBox16.Text != "") n = Convert.ToUInt32(textBox1.Text);
-            if (textBox2.Text != "") tr = Convert.ToUInt32(textBox2.Text);
-            if (textBox3.Text != "") hr = Convert.ToUInt32(textBox3.Text);
             if (comboBox1.Text != "") dnV[0] = Convert.ToDouble(comboBox1.Text);
             if (comboBox2.Text != "") dnV[1] = Convert.ToDouble(comboBox2.Text);
             if (comboBox3.Text != "") dnV[2] = Convert.ToDouble(comboBox3.Text);
@@ -59,19 +100,23 @@ namespace Sheet
             if (textBox13.Text != "") dchN[2] = Convert.ToDouble(textBox13.Text);
             if (textBox14.Text != "") dchN[3] = Convert.ToDouble(textBox14.Text);
             if (textBox15.Text != "") dchN[4] = Convert.ToDouble(textBox15.Text);
-            if (textBox17.Text != "") vpr = Convert.ToUInt32(textBox17.Text);
-            if (textBox18.Text != "") prby = Convert.ToUInt32(textBox18.Text);
+            if (tBCountPass.Text != "") vpr = Convert.ToUInt32(tBCountPass.Text);
+            if (tBCountOmissions.Text != "") prby = Convert.ToUInt32(tBCountOmissions.Text);
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            CalculatePerformance();
+
+
+
             CheckValidator();
             //для человеко-часов
             if ((textBox6.Text != "") && (textBox7.Text != "") && (textBox8.Text != "") && (textBox9.Text != "") && (textBox10.Text != "") && (comboBox1.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != "") && (comboBox4.Text != "") && (comboBox5.Text != ""))
             {
                 if ((dnV[0] + dnN[0] < 6) && (dnV[1] + dnN[1] < 6) && (dnV[2] + dnN[2] < 6) && (dnV[3] + dnN[3] < 6) && (dnV[4] + dnN[4] < 6))
                 {
-                    textBox19.Clear();
+                    tBCountManHours.Clear();
                     double m;
                     m = dnV[0] * dchV[0];
                     if ((checkBox1.Checked == true) && (comboBox6.Text != "") && (textBox11.Text != ""))
@@ -88,107 +133,57 @@ namespace Sheet
                     m += dnV[4] * dchV[4];
                     if ((checkBox5.Checked == true) && (comboBox10.Text != "") && (textBox15.Text != ""))
                         m += dnN[4] * dchN[4];
-                    chch = m * n;
-                    textBox19.AppendText(chch + " ч/ч");
+                    //chch = m * n;
+                    tBCountManHours.AppendText(chch + " ч/ч");
                 }
                 else
                     MessageBox.Show("Количество недель в месяц не может быть больше 5-и!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-                textBox19.Clear();
+                tBCountManHours.Clear();
             //для посещаемости
-            if ((chch != 0) && (textBox17.Text != ""))
+            if ((chch != 0) && (tBCountPass.Text != ""))
             {
                 if (2 * vpr <= chch)
                 {
-                    textBox20.Clear();
+                    tBAttendance.Clear();
                     ovpr = Math.Ceiling((chch - 2 * vpr) * 1000 / chch) / 10;
-                    textBox20.AppendText(ovpr + "%");
+                    tBAttendance.AppendText(ovpr + "%");
                 }
                 else
                     MessageBox.Show("Количество пропусков превышает количество часов!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-                textBox20.Clear();
+                tBAttendance.Clear();
             //для прогулов 
-            if ((chch != 0) && (textBox18.Text != ""))
+            if ((chch != 0) && (tBCountOmissions.Text != ""))
             {
                 if (2 * prby <= chch)
                 {
-                    if (textBox17.Text != "")
+                    if (tBCountPass.Text != "")
                     {
                         if (prby <= vpr)
                         {
-                            textBox21.Clear();
+                            tBAbsenteeism.Clear();
                             oprby = Math.Ceiling(2 * prby * 1000 / chch) / 10;
-                            textBox21.AppendText(oprby + "%");
+                            tBAbsenteeism.AppendText(oprby + "%");
                         }
                         else
                             MessageBox.Show("Количество пропусков без уважительной причины превышает общее количество пропусков!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
-                        textBox21.Clear();
+                        tBAbsenteeism.Clear();
                         oprby = Math.Ceiling(2 * prby * 1000 / chch) / 10;
-                        textBox21.AppendText(oprby + "%");
+                        tBAbsenteeism.AppendText(oprby + "%");
                     }
                 }
                 else
                     MessageBox.Show("Количество пропусков без уважительной причины превышает количество часов!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
-                textBox21.Clear();
-            //для результатов успеваемости
-            if (textBox1.Text != "" && textBox2.Text != "")
-            {
-                if (tr <= n)
-                {
-                    textBox4.Clear();
-                    ysp = Math.Ceiling(tr * 1000.0 / n) / 10;
-                    textBox4.AppendText(ysp + "%");
-                }
-                else
-                {
-                    MessageBox.Show("Количество студентов, учащихся на оценки 3, 4, 5 не может превышать общее количество студентов!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    textBox2.Focus();
-                }
-            }
-            else
-                textBox4.Clear();
-            //для результатов качества
-            if (textBox1.Text != "" && textBox3.Text != "")
-            {
-                if (hr <= n)
-                {
-                    if (textBox2.Text != "")
-                    {
-                        if (hr <= tr)
-                        {
-                            textBox5.Clear();
-                            kz = Math.Ceiling(hr * 1000.0 / n) / 10;
-                            textBox5.AppendText(kz + "%");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Количество студентов, учащихся на оценки 4, 5 не может превышать количество студентов, учащихся на оценки 3, 4, 5!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            textBox3.Focus();
-                        }
-                    }
-                    else
-                    {
-                        textBox5.Clear();
-                        kz = Math.Ceiling(hr * 1000.0 / n) / 10;
-                        textBox5.AppendText(kz + "%");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Количество студентов, учащихся на оценки 4, 5 не может превышать общее количество студентов!", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    textBox3.Focus();
-                }
-            }
-            else
-                textBox5.Clear();
+                tBAbsenteeism.Clear();
+
             Array.Clear(dnV, 0, dnV.Length);
             Array.Clear(dnN, 0, dnN.Length);
             Array.Clear(dchV, 0, dchV.Length);
@@ -337,7 +332,7 @@ namespace Sheet
             this.Show();
         }
 
-        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxINT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
             {

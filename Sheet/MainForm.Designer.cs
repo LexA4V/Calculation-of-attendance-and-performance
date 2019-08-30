@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.gBPerformance = new System.Windows.Forms.GroupBox();
+            this.gBPerformanceResult = new System.Windows.Forms.GroupBox();
+            this.tBKnowledgeQuality = new System.Windows.Forms.TextBox();
+            this.tBAcademicPerformance = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tBCountStudens45 = new System.Windows.Forms.TextBox();
+            this.tBCountStudens345 = new System.Windows.Forms.TextBox();
+            this.tBCountStudens = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gBAttendance = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
@@ -52,9 +52,9 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.tBCountOmissions = new System.Windows.Forms.TextBox();
+            this.tBCountPass = new System.Windows.Forms.TextBox();
+            this.tBCountStudens2 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,82 +81,82 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gBAttendanceResult = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.tBAbsenteeism = new System.Windows.Forms.TextBox();
+            this.tBAttendance = new System.Windows.Forms.TextBox();
+            this.tBCountManHours = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.gBPerformance.SuspendLayout();
+            this.gBPerformanceResult.SuspendLayout();
+            this.gBAttendance.SuspendLayout();
+            this.gBAttendanceResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gBPerformance
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(487, 29);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(321, 269);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Успеваемость";
+            this.gBPerformance.BackColor = System.Drawing.Color.Transparent;
+            this.gBPerformance.Controls.Add(this.gBPerformanceResult);
+            this.gBPerformance.Controls.Add(this.tBCountStudens45);
+            this.gBPerformance.Controls.Add(this.tBCountStudens345);
+            this.gBPerformance.Controls.Add(this.tBCountStudens);
+            this.gBPerformance.Controls.Add(this.label3);
+            this.gBPerformance.Controls.Add(this.label2);
+            this.gBPerformance.Controls.Add(this.label1);
+            this.gBPerformance.ForeColor = System.Drawing.Color.Black;
+            this.gBPerformance.Location = new System.Drawing.Point(487, 29);
+            this.gBPerformance.Margin = new System.Windows.Forms.Padding(4);
+            this.gBPerformance.Name = "gBPerformance";
+            this.gBPerformance.Padding = new System.Windows.Forms.Padding(4);
+            this.gBPerformance.Size = new System.Drawing.Size(321, 269);
+            this.gBPerformance.TabIndex = 0;
+            this.gBPerformance.TabStop = false;
+            this.gBPerformance.Text = "Успеваемость";
             // 
-            // groupBox3
+            // gBPerformanceResult
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(8, 160);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(306, 97);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Результаты";
+            this.gBPerformanceResult.BackColor = System.Drawing.Color.Transparent;
+            this.gBPerformanceResult.Controls.Add(this.tBKnowledgeQuality);
+            this.gBPerformanceResult.Controls.Add(this.tBAcademicPerformance);
+            this.gBPerformanceResult.Controls.Add(this.label5);
+            this.gBPerformanceResult.Controls.Add(this.label4);
+            this.gBPerformanceResult.ForeColor = System.Drawing.Color.Black;
+            this.gBPerformanceResult.Location = new System.Drawing.Point(8, 160);
+            this.gBPerformanceResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gBPerformanceResult.Name = "gBPerformanceResult";
+            this.gBPerformanceResult.Padding = new System.Windows.Forms.Padding(4);
+            this.gBPerformanceResult.Size = new System.Drawing.Size(306, 97);
+            this.gBPerformanceResult.TabIndex = 6;
+            this.gBPerformanceResult.TabStop = false;
+            this.gBPerformanceResult.Text = "Результаты";
             // 
-            // textBox5
+            // tBKnowledgeQuality
             // 
-            this.textBox5.Location = new System.Drawing.Point(228, 54);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(67, 26);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBKnowledgeQuality.Location = new System.Drawing.Point(228, 54);
+            this.tBKnowledgeQuality.Margin = new System.Windows.Forms.Padding(4);
+            this.tBKnowledgeQuality.Name = "tBKnowledgeQuality";
+            this.tBKnowledgeQuality.ReadOnly = true;
+            this.tBKnowledgeQuality.Size = new System.Drawing.Size(67, 26);
+            this.tBKnowledgeQuality.TabIndex = 7;
+            this.tBKnowledgeQuality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // tBAcademicPerformance
             // 
-            this.textBox4.Location = new System.Drawing.Point(228, 20);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(67, 26);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBAcademicPerformance.Location = new System.Drawing.Point(228, 20);
+            this.tBAcademicPerformance.Margin = new System.Windows.Forms.Padding(4);
+            this.tBAcademicPerformance.Name = "tBAcademicPerformance";
+            this.tBAcademicPerformance.ReadOnly = true;
+            this.tBAcademicPerformance.Size = new System.Drawing.Size(67, 26);
+            this.tBAcademicPerformance.TabIndex = 6;
+            this.tBAcademicPerformance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -180,33 +180,36 @@
             this.label4.Text = "Процент успеваемости группы";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // tBCountStudens45
             // 
-            this.textBox3.Location = new System.Drawing.Point(236, 110);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(67, 26);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens45.Location = new System.Drawing.Point(236, 110);
+            this.tBCountStudens45.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountStudens45.Name = "tBCountStudens45";
+            this.tBCountStudens45.Size = new System.Drawing.Size(67, 26);
+            this.tBCountStudens45.TabIndex = 5;
+            this.tBCountStudens45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens45.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
-            // textBox2
+            // tBCountStudens345
             // 
-            this.textBox2.Location = new System.Drawing.Point(236, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(67, 26);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens345.Location = new System.Drawing.Point(236, 70);
+            this.tBCountStudens345.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountStudens345.Name = "tBCountStudens345";
+            this.tBCountStudens345.Size = new System.Drawing.Size(67, 26);
+            this.tBCountStudens345.TabIndex = 4;
+            this.tBCountStudens345.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens345.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
-            // textBox1
+            // tBCountStudens
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 31);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(67, 26);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tBCountStudens.Location = new System.Drawing.Point(236, 31);
+            this.tBCountStudens.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountStudens.Name = "tBCountStudens";
+            this.tBCountStudens.Size = new System.Drawing.Size(67, 26);
+            this.tBCountStudens.TabIndex = 3;
+            this.tBCountStudens.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tBCountStudens.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
             // label3
             // 
@@ -241,58 +244,58 @@
             this.label1.Text = "Количество студентов в группе";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
+            // gBAttendance
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.comboBox6);
-            this.groupBox2.Controls.Add(this.comboBox7);
-            this.groupBox2.Controls.Add(this.comboBox8);
-            this.groupBox2.Controls.Add(this.comboBox9);
-            this.groupBox2.Controls.Add(this.comboBox10);
-            this.groupBox2.Controls.Add(this.comboBox5);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.textBox17);
-            this.groupBox2.Controls.Add(this.textBox16);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(33, 29);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(443, 430);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Посещаемость";
+            this.gBAttendance.BackColor = System.Drawing.Color.Transparent;
+            this.gBAttendance.Controls.Add(this.label19);
+            this.gBAttendance.Controls.Add(this.comboBox6);
+            this.gBAttendance.Controls.Add(this.comboBox7);
+            this.gBAttendance.Controls.Add(this.comboBox8);
+            this.gBAttendance.Controls.Add(this.comboBox9);
+            this.gBAttendance.Controls.Add(this.comboBox10);
+            this.gBAttendance.Controls.Add(this.comboBox5);
+            this.gBAttendance.Controls.Add(this.comboBox4);
+            this.gBAttendance.Controls.Add(this.comboBox3);
+            this.gBAttendance.Controls.Add(this.comboBox2);
+            this.gBAttendance.Controls.Add(this.tBCountOmissions);
+            this.gBAttendance.Controls.Add(this.tBCountPass);
+            this.gBAttendance.Controls.Add(this.tBCountStudens2);
+            this.gBAttendance.Controls.Add(this.label15);
+            this.gBAttendance.Controls.Add(this.label14);
+            this.gBAttendance.Controls.Add(this.label13);
+            this.gBAttendance.Controls.Add(this.checkBox5);
+            this.gBAttendance.Controls.Add(this.checkBox4);
+            this.gBAttendance.Controls.Add(this.checkBox3);
+            this.gBAttendance.Controls.Add(this.checkBox2);
+            this.gBAttendance.Controls.Add(this.checkBox1);
+            this.gBAttendance.Controls.Add(this.textBox15);
+            this.gBAttendance.Controls.Add(this.textBox14);
+            this.gBAttendance.Controls.Add(this.textBox13);
+            this.gBAttendance.Controls.Add(this.textBox12);
+            this.gBAttendance.Controls.Add(this.textBox11);
+            this.gBAttendance.Controls.Add(this.textBox10);
+            this.gBAttendance.Controls.Add(this.textBox9);
+            this.gBAttendance.Controls.Add(this.textBox8);
+            this.gBAttendance.Controls.Add(this.textBox7);
+            this.gBAttendance.Controls.Add(this.textBox6);
+            this.gBAttendance.Controls.Add(this.comboBox1);
+            this.gBAttendance.Controls.Add(this.label12);
+            this.gBAttendance.Controls.Add(this.label11);
+            this.gBAttendance.Controls.Add(this.label10);
+            this.gBAttendance.Controls.Add(this.label9);
+            this.gBAttendance.Controls.Add(this.label8);
+            this.gBAttendance.Controls.Add(this.label7);
+            this.gBAttendance.Controls.Add(this.label6);
+            this.gBAttendance.Controls.Add(this.gBAttendanceResult);
+            this.gBAttendance.ForeColor = System.Drawing.Color.Black;
+            this.gBAttendance.Location = new System.Drawing.Point(33, 29);
+            this.gBAttendance.Margin = new System.Windows.Forms.Padding(4);
+            this.gBAttendance.Name = "gBAttendance";
+            this.gBAttendance.Padding = new System.Windows.Forms.Padding(4);
+            this.gBAttendance.Size = new System.Drawing.Size(443, 430);
+            this.gBAttendance.TabIndex = 1;
+            this.gBAttendance.TabStop = false;
+            this.gBAttendance.Text = "Посещаемость";
             // 
             // label19
             // 
@@ -429,33 +432,33 @@
             this.comboBox2.Size = new System.Drawing.Size(32, 26);
             this.comboBox2.TabIndex = 48;
             // 
-            // textBox18
+            // tBCountOmissions
             // 
-            this.textBox18.Location = new System.Drawing.Point(300, 265);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(112, 26);
-            this.textBox18.TabIndex = 47;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountOmissions.Location = new System.Drawing.Point(300, 265);
+            this.tBCountOmissions.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountOmissions.Name = "tBCountOmissions";
+            this.tBCountOmissions.Size = new System.Drawing.Size(112, 26);
+            this.tBCountOmissions.TabIndex = 47;
+            this.tBCountOmissions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox17
+            // tBCountPass
             // 
-            this.textBox17.Location = new System.Drawing.Point(300, 236);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(112, 26);
-            this.textBox17.TabIndex = 46;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountPass.Location = new System.Drawing.Point(300, 236);
+            this.tBCountPass.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountPass.Name = "tBCountPass";
+            this.tBCountPass.Size = new System.Drawing.Size(112, 26);
+            this.tBCountPass.TabIndex = 46;
+            this.tBCountPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox16
+            // tBCountStudens2
             // 
-            this.textBox16.Location = new System.Drawing.Point(300, 207);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(112, 26);
-            this.textBox16.TabIndex = 45;
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
+            this.tBCountStudens2.Location = new System.Drawing.Point(300, 207);
+            this.tBCountStudens2.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountStudens2.Name = "tBCountStudens2";
+            this.tBCountStudens2.Size = new System.Drawing.Size(112, 26);
+            this.tBCountStudens2.TabIndex = 45;
+            this.tBCountStudens2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountStudens2.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // label15
             // 
@@ -649,7 +652,7 @@
             this.textBox6.Size = new System.Drawing.Size(32, 26);
             this.textBox6.TabIndex = 26;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
             // comboBox1
             // 
@@ -740,23 +743,23 @@
             this.label6.Text = "Количество дней в месяце:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox4
+            // gBAttendanceResult
             // 
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox21);
-            this.groupBox4.Controls.Add(this.textBox20);
-            this.groupBox4.Controls.Add(this.textBox19);
-            this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(8, 299);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(426, 120);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Результаты";
+            this.gBAttendanceResult.Controls.Add(this.label18);
+            this.gBAttendanceResult.Controls.Add(this.label17);
+            this.gBAttendanceResult.Controls.Add(this.label16);
+            this.gBAttendanceResult.Controls.Add(this.tBAbsenteeism);
+            this.gBAttendanceResult.Controls.Add(this.tBAttendance);
+            this.gBAttendanceResult.Controls.Add(this.tBCountManHours);
+            this.gBAttendanceResult.ForeColor = System.Drawing.Color.Black;
+            this.gBAttendanceResult.Location = new System.Drawing.Point(8, 299);
+            this.gBAttendanceResult.Margin = new System.Windows.Forms.Padding(4);
+            this.gBAttendanceResult.Name = "gBAttendanceResult";
+            this.gBAttendanceResult.Padding = new System.Windows.Forms.Padding(4);
+            this.gBAttendanceResult.Size = new System.Drawing.Size(426, 120);
+            this.gBAttendanceResult.TabIndex = 7;
+            this.gBAttendanceResult.TabStop = false;
+            this.gBAttendanceResult.Text = "Результаты";
             // 
             // label18
             // 
@@ -791,35 +794,35 @@
             this.label16.Text = "Общее количество человеко-часов за месяц";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox21
+            // tBAbsenteeism
             // 
-            this.textBox21.Location = new System.Drawing.Point(314, 85);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(90, 26);
-            this.textBox21.TabIndex = 48;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBAbsenteeism.Location = new System.Drawing.Point(314, 85);
+            this.tBAbsenteeism.Margin = new System.Windows.Forms.Padding(4);
+            this.tBAbsenteeism.Name = "tBAbsenteeism";
+            this.tBAbsenteeism.ReadOnly = true;
+            this.tBAbsenteeism.Size = new System.Drawing.Size(90, 26);
+            this.tBAbsenteeism.TabIndex = 48;
+            this.tBAbsenteeism.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox20
+            // tBAttendance
             // 
-            this.textBox20.Location = new System.Drawing.Point(314, 56);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(90, 26);
-            this.textBox20.TabIndex = 47;
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBAttendance.Location = new System.Drawing.Point(314, 56);
+            this.tBAttendance.Margin = new System.Windows.Forms.Padding(4);
+            this.tBAttendance.Name = "tBAttendance";
+            this.tBAttendance.ReadOnly = true;
+            this.tBAttendance.Size = new System.Drawing.Size(90, 26);
+            this.tBAttendance.TabIndex = 47;
+            this.tBAttendance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox19
+            // tBCountManHours
             // 
-            this.textBox19.Location = new System.Drawing.Point(314, 27);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(90, 26);
-            this.textBox19.TabIndex = 46;
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBCountManHours.Location = new System.Drawing.Point(314, 27);
+            this.tBCountManHours.Margin = new System.Windows.Forms.Padding(4);
+            this.tBCountManHours.Name = "tBCountManHours";
+            this.tBCountManHours.ReadOnly = true;
+            this.tBCountManHours.Size = new System.Drawing.Size(90, 26);
+            this.tBCountManHours.TabIndex = 46;
+            this.tBCountManHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // errorProvider1
             // 
@@ -874,8 +877,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gBAttendance);
+            this.Controls.Add(this.gBPerformance);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -884,14 +887,14 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ведомость";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.gBPerformance.ResumeLayout(false);
+            this.gBPerformance.PerformLayout();
+            this.gBPerformanceResult.ResumeLayout(false);
+            this.gBPerformanceResult.PerformLayout();
+            this.gBAttendance.ResumeLayout(false);
+            this.gBAttendance.PerformLayout();
+            this.gBAttendanceResult.ResumeLayout(false);
+            this.gBAttendanceResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -900,18 +903,18 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gBPerformance;
+        private System.Windows.Forms.GroupBox gBAttendance;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox gBPerformanceResult;
+        private System.Windows.Forms.TextBox tBKnowledgeQuality;
+        private System.Windows.Forms.TextBox tBAcademicPerformance;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tBCountStudens45;
+        private System.Windows.Forms.TextBox tBCountStudens345;
+        private System.Windows.Forms.TextBox tBCountStudens;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -938,19 +941,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.GroupBox gBAttendanceResult;
+        private System.Windows.Forms.TextBox tBCountOmissions;
+        private System.Windows.Forms.TextBox tBCountPass;
+        private System.Windows.Forms.TextBox tBCountStudens2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox tBAbsenteeism;
+        private System.Windows.Forms.TextBox tBAttendance;
+        private System.Windows.Forms.TextBox tBCountManHours;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.ComboBox comboBox8;
