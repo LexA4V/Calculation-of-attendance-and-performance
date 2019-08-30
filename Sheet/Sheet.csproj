@@ -136,7 +136,6 @@
     <Compile Include="Reference.Designer.cs">
       <DependentUpon>Reference.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Week.cs" />
     <EmbeddedResource Include="AboutTheProgram.resx">
       <DependentUpon>AboutTheProgram.cs</DependentUpon>
     </EmbeddedResource>
