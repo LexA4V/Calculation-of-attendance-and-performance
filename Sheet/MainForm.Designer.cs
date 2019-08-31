@@ -93,7 +93,7 @@
             this.gBPerformance.Controls.Add(this.label2);
             this.gBPerformance.Controls.Add(this.label1);
             this.gBPerformance.ForeColor = System.Drawing.Color.Black;
-            this.gBPerformance.Location = new System.Drawing.Point(487, 29);
+            this.gBPerformance.Location = new System.Drawing.Point(486, 35);
             this.gBPerformance.Margin = new System.Windows.Forms.Padding(4);
             this.gBPerformance.Name = "gBPerformance";
             this.gBPerformance.Padding = new System.Windows.Forms.Padding(4);
@@ -250,7 +250,7 @@
             this.gBAttendance.Controls.Add(this.label6);
             this.gBAttendance.Controls.Add(this.gBAttendanceResult);
             this.gBAttendance.ForeColor = System.Drawing.Color.Black;
-            this.gBAttendance.Location = new System.Drawing.Point(33, 29);
+            this.gBAttendance.Location = new System.Drawing.Point(32, 35);
             this.gBAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.gBAttendance.Name = "gBAttendance";
             this.gBAttendance.Padding = new System.Windows.Forms.Padding(4);
@@ -559,14 +559,14 @@
             // 
             // btnExit
             // 
+            this.btnExit.BackgroundImage = global::Sheet.Properties.Resources.ButtonBackground;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnExit.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(487, 384);
+            this.btnExit.Location = new System.Drawing.Point(486, 400);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(200, 50);
+            this.btnExit.Size = new System.Drawing.Size(184, 65);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Выход";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -574,13 +574,14 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCalculate.BackgroundImage = global::Sheet.Properties.Resources.ButtonBackground;
+            this.btnCalculate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCalculate.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCalculate.ForeColor = System.Drawing.Color.Black;
-            this.btnCalculate.Location = new System.Drawing.Point(487, 326);
+            this.btnCalculate.Location = new System.Drawing.Point(486, 312);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(201, 50);
+            this.btnCalculate.Size = new System.Drawing.Size(184, 80);
             this.btnCalculate.TabIndex = 2;
             this.btnCalculate.Text = "Расчёт";
             this.btnCalculate.UseVisualStyleBackColor = false;
@@ -589,9 +590,9 @@
             // pBAboutTheProgram
             // 
             this.pBAboutTheProgram.BackColor = System.Drawing.Color.Transparent;
-            this.pBAboutTheProgram.BackgroundImage = global::Sheet.Properties.Resources.question;
+            this.pBAboutTheProgram.BackgroundImage = global::Sheet.Properties.Resources._35704;
             this.pBAboutTheProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBAboutTheProgram.Location = new System.Drawing.Point(700, 328);
+            this.pBAboutTheProgram.Location = new System.Drawing.Point(692, 325);
             this.pBAboutTheProgram.Name = "pBAboutTheProgram";
             this.pBAboutTheProgram.Size = new System.Drawing.Size(108, 106);
             this.pBAboutTheProgram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -603,8 +604,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Sheet.Properties.Resources.MainBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(842, 493);
+            this.ClientSize = new System.Drawing.Size(841, 493);
             this.Controls.Add(this.pBAboutTheProgram);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
