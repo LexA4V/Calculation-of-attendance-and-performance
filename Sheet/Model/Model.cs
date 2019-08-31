@@ -2,7 +2,7 @@
 
 namespace Sheet
 {
-    class Model
+    class SheetModel
     {
         public double Performance(int countStudets, int countStudents345)
         {

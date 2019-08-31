@@ -129,4 +129,81 @@
 специальности «программирование в компьютерных системах», 
 обучающихся в данном учебном заведении.</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAABILAAASCwAAAAAAAAAA
+        AAC/v79Qvb29pr29vae9vb2nvb29p729vae9vb2nvb29p729vae9vb2nvb29p729vae9vb2nvb29p729
+        vae9vb2nvb29p729vae9vb2nvb29p729vae9vb2nvb29p729vae+vr59vr6+AisrKwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAANLS0ubg4OD94eHh/uHh4f7h4eH+4eHh/uHh4f7h4eH+4eHh/uHh4f7h4eH+4eHh/uHh
+        4f7h4eH+4eHh/uHh4f7h4eH+4eHh/uHh4f7h4eH+4eHh/uHh4f7h4eH+4eHh/tnZ2fzJyck2MzMzAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA4ODg7+Hh4f7h4eH/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li
+        4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li4v/h4eH/4eHh/dnZ
+        2UA3NzcAAAAAAAAAAAAAAAAAAAAAAAAAAADh4eHv4eHh/uLi4v/h4eH/4eHh/+Dg4P/g4OD/4ODg/+Dg
+        4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg4P/h4eH/4eHh/+Hh4f/i4uL/4uLi/+Li4v/i4uL/4uLi/+Li
+        4v/h4eH93d3dQDo6OgABAQEAAAAAAAAAAAAAAAAAAAAAAOLi4u/i4uL+4uLi/+Hh4f+zs7P/paWl/6Wl
+        pf+lpaX/paWl/6Wlpf+lpaX/paWl/6Wlpf+lpaX/paWl/6ampv/Nzc3/4eHh/+Hh4f/g4OD/4ODg/+Hh
+        4f/h4eH/4uLi/+Hh4f3e3t5AOjo6AAEBAQAAAAAAAAAAAAAAAAAAAAAA4uLi7+Li4v7i4uL/4eHh/9DQ
+        0P/Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/yMjI/9ra2v/h4eH/4ODg/3d3
+        d/+Ghob/1NTU/+Hh4f/h4eH/4eHh/d7e3kA6OjoAAQEBAAAAAAAAAAAAAAAAAAAAAADi4uLv4uLi/uLi
+        4v/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh
+        4f/g4OD/gYGB/zAwMP9eXl7/39/f/+Hh4f/h4eH93d3eQDk6OgABAQEAAAAAAAAAAAAAAAAAAAAAAOLi
+        4u/i4uL+4uLi/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh
+        4f/h4eH/4eHh/+Dg4P+lpaX/ioqK/+np6f/z8/P/5+fo/9zd3v3B099AMVhyAAACAgAAAAAAAAAAAAAA
+        AAAAAAAA4uLi7+Li4v7i4uL/4eHh/97e3v/a2tr/2tra/9ra2v/a2tr/2tra/9ra2v/a2tr/2tra/9ra
+        2v/a2tr/2tra/9ra2v/a2tr/2tra/+Tk5P/4+Pj/9/f3//T19f/r8PL/hsTt/Tqj5n8hld8BBR0tAAAA
+        AQAAAAAAAAAAAAAAAADi4uLv4uLi/uLi4v/h4eH/paWl/5OTk/+SkpL/kpKS/5KSkv+SkpL/kpKS/5KS
+        kv+SkpL/kpKS/5KSkv+SkpL/kpKS/5KSkv+Tk5P/p6en//n5+v/19/f/0ub0/0+w8P8loO/+HZrq+BuW
+        5TUUfL4AAAYKAAAAAAAAAAAAAAAAAOPj4+/j4+P+4+Pj/+Li4v/i4uL/4eHh/+Hh4f/h4eH/4eHh/+Hh
+        4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/h4eH/4eHh/+Hh4f/j5OT/9vj5/5rO8f8xp/P/IJzs/yKe
+        7v4fm+v+G5bm1RiT4goMVIIAAAECAAAAAAAAAAAA5OTk7+Tk5P7k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk
+        5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Pj5P96we//Hpjn/x+b
+        6/8hnu7/HJjo/yCd7f4cmOj9GJPjkxaQ3wEGKUAAAAEBAAAAAADk5OTv5OTk/uTk5P/k5OT/5OTk/+Tk
+        5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk5P/k5OT/5OTk/+Tk5P/k5OT/4+Tk/7nV
+        5/8nn+3/GZXl/yCd7f8dmen/G5fn/x6a6v4Zlub8FZHgSBF/xQABCxEAAAABAOXl5e/l5eX+5eXl/+Tk
+        5P/R0dH/yMjI/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fH
+        x//Hx8f/xsfI/3+95f8hnOv/Gpbm/x6b6/8YlOT/G5jo/huX5/4WkeHjE47eFA1flAAAAgMA5ubm7+bm
+        5v7m5ub/5eXl/7e3t/+pqan/qamp/6mpqf+pqan/qamp/6mpqf+pqan/qamp/6mpqf+pqan/qamp/6mp
+        qf+pqan/qamp/6mpqf+pqar/z9PV/1Cx7/8fm+v/G5jo/xqW5v8VkeH/HJjo/hiU5P0UkN+qG5DdAShG
+        WQDn5+fv5+fn/ufn5//m5ub/5ubm/+Xl5f/l5eX/5eXl/+Xl5f/l5eX/5eXl/+Xl5f/l5eX/5eXl/+Xl
+        5f/l5eX/5eXl/+Xl5f/l5eX/5eXl/+bm5v/l5ub/x9zo/y+l8P8cmen/Gpbm/xaS4v8Xk+P/G5fm/hmT
+        4f13tuFoyNPnAefn5+/n5+f+5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn
+        5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//n5+f/5+fn/+fn5//m5+j/mczt/yag7/8bmOj/GJTk/xaQ
+        4P80neL/sdHm/szN7vZ9fuYi6Ojo7+jo6P7o6Oj/5+fn/+fn5//n5+f/5ubm/+bm5v/m5ub/5ubm/+bm
+        5v/m5ub/5ubm/+bm5v/m5ub/5ubm/+bm5v/m5ub/5ubm/+bm5v/n5+f/5+fn/+fn5//l5+j/Yrnx/iSe
+        7f4cl+b+ZrHi/9nh6v+dnuj+SEjh/khI47zp6env6enp/unp6f/o6Oj/vb29/6+vr/+vr6//r6+v/6+v
+        r/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr//Z2dn/6Ojo/+jo
+        6f/U4uv+SbDx/KvS7f7R0un/a2zj/0RE4v5GRuT+R0fm9erq6u/q6ur+6urq/+np6f/Pz8//xcXF/8XF
+        xf/FxcX/xcXF/8XFxf/FxcX/xcXF/8XFxf/FxcX/xcXF/8XFxf/FxcX/xcXF/8XFxf/FxcX/xcXF/+Hh
+        4f/p6en/6enq/+jp6v7g5u2tpqfj/U1N4f5FReP+R0fl/UhI5thISOc46urq7+rq6v7q6ur/6urq/+rq
+        6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq
+        6v/q6ur/6urq/+rq6v/q6ur/6urq/c7O6EFSUuKhRUXk/UdH5fxISOeWSEjmDEFBzAHr6+vv6+vr/uvr
+        6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr
+        6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//q6ur929vpQFpa5BBISOWUSEjmSkdH5AExMZoABgYWAOzs
+        7O/s7Oz+7Ozs/+vr6//r6+v/6urq/+rq6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq6v/q6ur/6urq/+rq
+        6v/r6+v/6+vr/+zs7P/s7Oz/7Ozs/+zs7P/s7Oz/7Ozs/+vr6/3o6OpAXl6wATY2qwA1NacAHBxXAAAA
+        AwAAAAEA7e3t7+3t7f7t7e3/7Ozs/6urq/+YmJj/mJiY/5iYmP+YmJj/mJiY/5iYmP+YmJj/mJiY/5iY
+        mP+YmJj/mJiY/9DQ0P/s7Oz/7e3t/+3t7f/t7e3/7e3t/+3t7f/t7e3/7Ozs/enp6kA9PT8AAQEDAAAA
+        AgAAAAEAAAAAAAAAAADu7u7v7u7u/u7u7v/t7e3/5ubm/+Dg4P/g4OD/4ODg/+Dg4P/g4OD/4ODg/+Dg
+        4P/g4OD/4ODg/+Dg4P/h4eH/6+vr/+3t7f/t7e3/7e3t/+3t7P/t7Oz/7ezs/+3s7P7t7Oz95uXjQDw8
+        OwABAQEAAAAAAAAAAAAAAAAAAAAAAO7u7u/u7u7+7u7u/+7u7v/u7u7/7u7u/+7u7v/u7u7/7u7u/+7u
+        7v/u7u7/7u7u/+7u7v/u7u7/7u7u/+7u7v/u7u7/7u7u/+7u7v/g2tD/xrKK/8OwiP/DsIv+wrGP/sS0
+        lPbQxa8qOTg1AAAAAAAAAAAAAAAAAAAAAAAAAAAA7+/v7+/v7/7v7+//7+/v/+/v7//v7+//7+/v/+/v
+        7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7u7t/9Cydv/Nn0X/yZxB/sSY
+        Pf7BlDn3t489ULCTWAEoJBsAAAAAAAAAAAAAAAAAAAAAAAAAAADw8PDv8PDw/vDw8P/w8PD/8PDw//Dw
+        8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw8P/v7u3/2LRt/86g
+        RP7Jmz/+xZg898CTN1C8kDUBUT4WAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPHx8e/x8fH+8fHx//Hx
+        8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Dv
+        7v/YtG3+zqBE/sqcQPfFlztQwJQ5AVRAGAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8fHx7/Hx
+        8f7x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx8f/x8fH/8fHx//Hx
+        8f/x8fH/8fDv/ti0bf7OoET3yZs/UMWXPQFWQhoAAgEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADy8vLb8vLy/fLy8v3y8vL98vLy/fLy8v3y8vL98vLy/fLy8v3y8vL98vLy/fLy8v3y8vL98vLy/fLy
+        8v3y8vL98vLy/fLx8f3x8O/92LRu9s2gRVDJm0EBWEQcAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAPLy8ivy8vJ28vLyePLy8njy8vJ48vLyePLy8njy8vJ48vLyePLy8njy8vJ48vLyePLy
+        8njy8vJ48vLyePLy8njy8vJ48vLyeO/s5Xffw41Fz6RNAVtHHQACAgAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAPwAAAD8AAAA/AAAAPwAAAD8AAAA/AAAAPwAAAD8AAAAfAAAAHwAA
+        AA8AAAAHAAAABwAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAB8AAAA/AAAAPwAA
+        AD8AAAA/AAAAfwAAAP8AAAH/AAAD/wAAB/8=
+</value>
+  </data>
 </root>

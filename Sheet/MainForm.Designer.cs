@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gBPerformance = new System.Windows.Forms.GroupBox();
             this.gBPerformanceResult = new System.Windows.Forms.GroupBox();
             this.tBKnowledgeQuality = new System.Windows.Forms.TextBox();
@@ -42,6 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gBAttendance = new System.Windows.Forms.GroupBox();
+            this.cDWFriday = new ControlWeekS.ControlDayOfWeek();
+            this.cDWThursday = new ControlWeekS.ControlDayOfWeek();
+            this.cDWWednesday = new ControlWeekS.ControlDayOfWeek();
+            this.cDWThuesday = new ControlWeekS.ControlDayOfWeek();
+            this.cDWMonday = new ControlWeekS.ControlDayOfWeek();
             this.label19 = new System.Windows.Forms.Label();
             this.tBCountOmissions = new System.Windows.Forms.TextBox();
             this.tBCountPass = new System.Windows.Forms.TextBox();
@@ -67,18 +73,13 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cDWMonday = new ControlWeekS.ControlDayOfWeek();
-            this.cDWThuesday = new ControlWeekS.ControlDayOfWeek();
-            this.cDWWednesday = new ControlWeekS.ControlDayOfWeek();
-            this.cDWThursday = new ControlWeekS.ControlDayOfWeek();
-            this.cDWFriday = new ControlWeekS.ControlDayOfWeek();
+            this.pBAboutTheProgram = new System.Windows.Forms.PictureBox();
             this.gBPerformance.SuspendLayout();
             this.gBPerformanceResult.SuspendLayout();
             this.gBAttendance.SuspendLayout();
             this.gBAttendanceResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAboutTheProgram)).BeginInit();
             this.SuspendLayout();
             // 
             // gBPerformance
@@ -227,6 +228,7 @@
             // gBAttendance
             // 
             this.gBAttendance.BackColor = System.Drawing.Color.Transparent;
+            this.gBAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gBAttendance.Controls.Add(this.cDWFriday);
             this.gBAttendance.Controls.Add(this.cDWThursday);
             this.gBAttendance.Controls.Add(this.cDWWednesday);
@@ -256,6 +258,66 @@
             this.gBAttendance.TabIndex = 1;
             this.gBAttendance.TabStop = false;
             this.gBAttendance.Text = "Посещаемость";
+            // 
+            // cDWFriday
+            // 
+            this.cDWFriday.AutoSize = true;
+            this.cDWFriday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cDWFriday.BackColor = System.Drawing.Color.Transparent;
+            this.cDWFriday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cDWFriday.Location = new System.Drawing.Point(372, 41);
+            this.cDWFriday.Margin = new System.Windows.Forms.Padding(0);
+            this.cDWFriday.Name = "cDWFriday";
+            this.cDWFriday.Size = new System.Drawing.Size(40, 156);
+            this.cDWFriday.TabIndex = 64;
+            // 
+            // cDWThursday
+            // 
+            this.cDWThursday.AutoSize = true;
+            this.cDWThursday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cDWThursday.BackColor = System.Drawing.Color.Transparent;
+            this.cDWThursday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cDWThursday.Location = new System.Drawing.Point(332, 41);
+            this.cDWThursday.Margin = new System.Windows.Forms.Padding(0);
+            this.cDWThursday.Name = "cDWThursday";
+            this.cDWThursday.Size = new System.Drawing.Size(40, 156);
+            this.cDWThursday.TabIndex = 63;
+            // 
+            // cDWWednesday
+            // 
+            this.cDWWednesday.AutoSize = true;
+            this.cDWWednesday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cDWWednesday.BackColor = System.Drawing.Color.Transparent;
+            this.cDWWednesday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cDWWednesday.Location = new System.Drawing.Point(293, 41);
+            this.cDWWednesday.Margin = new System.Windows.Forms.Padding(0);
+            this.cDWWednesday.Name = "cDWWednesday";
+            this.cDWWednesday.Size = new System.Drawing.Size(40, 156);
+            this.cDWWednesday.TabIndex = 62;
+            // 
+            // cDWThuesday
+            // 
+            this.cDWThuesday.AutoSize = true;
+            this.cDWThuesday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cDWThuesday.BackColor = System.Drawing.Color.Transparent;
+            this.cDWThuesday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cDWThuesday.Location = new System.Drawing.Point(253, 41);
+            this.cDWThuesday.Margin = new System.Windows.Forms.Padding(0);
+            this.cDWThuesday.Name = "cDWThuesday";
+            this.cDWThuesday.Size = new System.Drawing.Size(40, 156);
+            this.cDWThuesday.TabIndex = 61;
+            // 
+            // cDWMonday
+            // 
+            this.cDWMonday.AutoSize = true;
+            this.cDWMonday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cDWMonday.BackColor = System.Drawing.Color.Transparent;
+            this.cDWMonday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cDWMonday.Location = new System.Drawing.Point(213, 41);
+            this.cDWMonday.Margin = new System.Windows.Forms.Padding(0);
+            this.cDWMonday.Name = "cDWMonday";
+            this.cDWMonday.Size = new System.Drawing.Size(40, 156);
+            this.cDWMonday.TabIndex = 60;
             // 
             // label19
             // 
@@ -524,76 +586,18 @@
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // pictureBox1
+            // pBAboutTheProgram
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(700, 328);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // cDWMonday
-            // 
-            this.cDWMonday.AutoSize = true;
-            this.cDWMonday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cDWMonday.BackColor = System.Drawing.Color.Transparent;
-            this.cDWMonday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cDWMonday.Location = new System.Drawing.Point(213, 41);
-            this.cDWMonday.Margin = new System.Windows.Forms.Padding(0);
-            this.cDWMonday.Name = "cDWMonday";
-            this.cDWMonday.Size = new System.Drawing.Size(40, 156);
-            this.cDWMonday.TabIndex = 60;
-            // 
-            // cDWThuesday
-            // 
-            this.cDWThuesday.AutoSize = true;
-            this.cDWThuesday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cDWThuesday.BackColor = System.Drawing.Color.Transparent;
-            this.cDWThuesday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cDWThuesday.Location = new System.Drawing.Point(253, 41);
-            this.cDWThuesday.Margin = new System.Windows.Forms.Padding(0);
-            this.cDWThuesday.Name = "cDWThuesday";
-            this.cDWThuesday.Size = new System.Drawing.Size(40, 156);
-            this.cDWThuesday.TabIndex = 61;
-            // 
-            // cDWWednesday
-            // 
-            this.cDWWednesday.AutoSize = true;
-            this.cDWWednesday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cDWWednesday.BackColor = System.Drawing.Color.Transparent;
-            this.cDWWednesday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cDWWednesday.Location = new System.Drawing.Point(293, 41);
-            this.cDWWednesday.Margin = new System.Windows.Forms.Padding(0);
-            this.cDWWednesday.Name = "cDWWednesday";
-            this.cDWWednesday.Size = new System.Drawing.Size(40, 156);
-            this.cDWWednesday.TabIndex = 62;
-            // 
-            // cDWThursday
-            // 
-            this.cDWThursday.AutoSize = true;
-            this.cDWThursday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cDWThursday.BackColor = System.Drawing.Color.Transparent;
-            this.cDWThursday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cDWThursday.Location = new System.Drawing.Point(332, 41);
-            this.cDWThursday.Margin = new System.Windows.Forms.Padding(0);
-            this.cDWThursday.Name = "cDWThursday";
-            this.cDWThursday.Size = new System.Drawing.Size(40, 156);
-            this.cDWThursday.TabIndex = 63;
-            // 
-            // cDWFriday
-            // 
-            this.cDWFriday.AutoSize = true;
-            this.cDWFriday.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cDWFriday.BackColor = System.Drawing.Color.Transparent;
-            this.cDWFriday.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cDWFriday.Location = new System.Drawing.Point(372, 41);
-            this.cDWFriday.Margin = new System.Windows.Forms.Padding(0);
-            this.cDWFriday.Name = "cDWFriday";
-            this.cDWFriday.Size = new System.Drawing.Size(40, 156);
-            this.cDWFriday.TabIndex = 64;
+            this.pBAboutTheProgram.BackColor = System.Drawing.Color.Transparent;
+            this.pBAboutTheProgram.BackgroundImage = global::Sheet.Properties.Resources.question;
+            this.pBAboutTheProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBAboutTheProgram.Location = new System.Drawing.Point(700, 328);
+            this.pBAboutTheProgram.Name = "pBAboutTheProgram";
+            this.pBAboutTheProgram.Size = new System.Drawing.Size(108, 106);
+            this.pBAboutTheProgram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBAboutTheProgram.TabIndex = 13;
+            this.pBAboutTheProgram.TabStop = false;
+            this.pBAboutTheProgram.Click += new System.EventHandler(this.pBAboutTheProgram_Click);
             // 
             // MainForm
             // 
@@ -601,7 +605,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(842, 493);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pBAboutTheProgram);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.gBAttendance);
@@ -609,8 +613,9 @@
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(858, 531);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ведомость";
@@ -623,7 +628,7 @@
             this.gBAttendanceResult.ResumeLayout(false);
             this.gBAttendanceResult.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBAboutTheProgram)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,7 +673,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pBAboutTheProgram;
         private ControlWeekS.ControlDayOfWeek cDWFriday;
         private ControlWeekS.ControlDayOfWeek cDWThursday;
         private ControlWeekS.ControlDayOfWeek cDWWednesday;

@@ -12,7 +12,7 @@ namespace Sheet
         {
             InitializeComponent();
 
-            yy = new ControlDayOfWeek[5]
+            DataDays = new ControlDayOfWeek[5]
             {
                 cDWMonday,
                 cDWThuesday,
@@ -22,9 +22,9 @@ namespace Sheet
             };
         }
 
-        Model calc = new Model();
+        SheetModel calc = new SheetModel();
 
-        private ControlDayOfWeek[] yy;
+        private ControlDayOfWeek[] DataDays;
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,10 +39,8 @@ namespace Sheet
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.OpenForms["StartForm"].Close();
             Application.Exit();
         }
-
 
         private void ClearResultPerformance()
         {
@@ -114,7 +112,7 @@ namespace Sheet
                     try
                     {
                         //человеко-часы
-                        totalMenHours = calc.GetHourOfMounth(countStudents, yy.Select(x => x.TotalCountHours).ToArray());
+                        totalMenHours = calc.GetHourOfMounth(countStudents, DataDays.Select(x => x.TotalCountHours).ToArray());
                         tBCountManHours.Text = string.Format("{0}ч/ч", Math.Round(totalMenHours, 2));
                     }
                     catch
@@ -157,27 +155,20 @@ namespace Sheet
             CalculateAttendance();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Enabled = false;
-            Reference r = new Reference((pictureBox1));
-            r.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AboutTheProgram a = new AboutTheProgram();
-            this.Hide();
-            a.ShowDialog();
-            this.Show();
-        }
-
         private void textBoxINT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar <= 47 || e.KeyChar >= 58) && e.KeyChar != 8)
             {
                 e.Handled = true;
             }
+        }
+
+        private void pBAboutTheProgram_Click(object sender, EventArgs e)
+        {
+            AboutTheProgram a = new AboutTheProgram();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
         }
     }
 }
