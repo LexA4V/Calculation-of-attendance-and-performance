@@ -131,7 +131,7 @@ namespace Sheet
                         if (countOmissions < countPass)
                         {
                             omissions = calc.Omissions(totalMenHours, countOmissions);
-                            tBCountOmissions.Text = string.Format("{0}%", Math.Round(omissions, 2));
+                            tBAbsenteeism.Text = string.Format("{0}%", Math.Round(omissions, 2));
                         }
                         else
                             throw new ArgumentException("Количество пропусков без уважительной причины превышает общее количество пропусков!");
