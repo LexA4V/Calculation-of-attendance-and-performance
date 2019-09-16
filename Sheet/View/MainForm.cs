@@ -12,6 +12,8 @@ namespace Sheet
         {
             InitializeComponent();
 
+            calc = new SheetModel();
+
             DataDays = new ControlDayOfWeek[5]
             {
                 cDWMonday,
@@ -22,17 +24,17 @@ namespace Sheet
             };
         }
 
-        SheetModel calc = new SheetModel();
+        private SheetModel calc;
 
         private ControlDayOfWeek[] DataDays;
 
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void tBCountStudens_TextChanged(object sender, EventArgs e)
         {
             tBCountStudens2.Text = tBCountStudens.Text;
         }
 
-        private void textBox16_TextChanged(object sender, EventArgs e)
+        private void tBCountStudens2_TextChanged(object sender, EventArgs e)
         {
             tBCountStudens.Text = tBCountStudens2.Text;
         }
@@ -166,9 +168,7 @@ namespace Sheet
         private void pBAboutTheProgram_Click(object sender, EventArgs e)
         {
             AboutTheProgram a = new AboutTheProgram();
-            this.Hide();
             a.ShowDialog();
-            this.Show();
         }
     }
 }

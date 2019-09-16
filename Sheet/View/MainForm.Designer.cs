@@ -92,7 +92,7 @@
             this.gBPerformance.Controls.Add(this.label3);
             this.gBPerformance.Controls.Add(this.label2);
             this.gBPerformance.Controls.Add(this.label1);
-            this.gBPerformance.ForeColor = System.Drawing.Color.Black;
+            this.gBPerformance.ForeColor = System.Drawing.Color.White;
             this.gBPerformance.Location = new System.Drawing.Point(486, 35);
             this.gBPerformance.Margin = new System.Windows.Forms.Padding(4);
             this.gBPerformance.Name = "gBPerformance";
@@ -109,7 +109,7 @@
             this.gBPerformanceResult.Controls.Add(this.tBAcademicPerformance);
             this.gBPerformanceResult.Controls.Add(this.label5);
             this.gBPerformanceResult.Controls.Add(this.label4);
-            this.gBPerformanceResult.ForeColor = System.Drawing.Color.Black;
+            this.gBPerformanceResult.ForeColor = System.Drawing.Color.White;
             this.gBPerformanceResult.Location = new System.Drawing.Point(8, 160);
             this.gBPerformanceResult.Margin = new System.Windows.Forms.Padding(4);
             this.gBPerformanceResult.Name = "gBPerformanceResult";
@@ -189,7 +189,7 @@
             this.tBCountStudens.Size = new System.Drawing.Size(67, 26);
             this.tBCountStudens.TabIndex = 3;
             this.tBCountStudens.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tBCountStudens.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tBCountStudens.TextChanged += new System.EventHandler(this.tBCountStudens_TextChanged);
             this.tBCountStudens.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
             // label3
@@ -249,7 +249,7 @@
             this.gBAttendance.Controls.Add(this.label7);
             this.gBAttendance.Controls.Add(this.label6);
             this.gBAttendance.Controls.Add(this.gBAttendanceResult);
-            this.gBAttendance.ForeColor = System.Drawing.Color.Black;
+            this.gBAttendance.ForeColor = System.Drawing.Color.White;
             this.gBAttendance.Location = new System.Drawing.Point(32, 35);
             this.gBAttendance.Margin = new System.Windows.Forms.Padding(4);
             this.gBAttendance.Name = "gBAttendance";
@@ -360,7 +360,7 @@
             this.tBCountStudens2.Size = new System.Drawing.Size(112, 26);
             this.tBCountStudens2.TabIndex = 45;
             this.tBCountStudens2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tBCountStudens2.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
+            this.tBCountStudens2.TextChanged += new System.EventHandler(this.tBCountStudens2_TextChanged);
             this.tBCountStudens2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxINT_KeyPress);
             // 
             // label15
@@ -480,7 +480,7 @@
             this.gBAttendanceResult.Controls.Add(this.tBAbsenteeism);
             this.gBAttendanceResult.Controls.Add(this.tBAttendance);
             this.gBAttendanceResult.Controls.Add(this.tBCountManHours);
-            this.gBAttendanceResult.ForeColor = System.Drawing.Color.Black;
+            this.gBAttendanceResult.ForeColor = System.Drawing.Color.White;
             this.gBAttendanceResult.Location = new System.Drawing.Point(8, 299);
             this.gBAttendanceResult.Margin = new System.Windows.Forms.Padding(4);
             this.gBAttendanceResult.Name = "gBAttendanceResult";
